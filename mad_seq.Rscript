@@ -1,0 +1,17 @@
+
+library(MADSEQ)
+
+#HG00096bam = "/zfs/scratch/saram_lab/1K_Genomes/HG00096.alt_bwamem_GRCh38DH.20150917.GBR.high_coverage.bam"
+#HG00114bam = "/zfs/scratch/saram_lab/1K_Genomes/HG00114.alt_bwamem_GRCh38DH.20150718.GBR.low_coverage.bam"
+#target = "/zfs/users/michael.vermeulen/michael.vermeulen/LOY_projct/test/MAD-SEQ/GRCh38.500k.interval_list.bed"
+
+ALD10 = "/zfs/scratch/saram_lab/ALD/WGS/ALD010_BWAmem_dupremoved_realigned.sorted.bam"
+ALD11 = "/zfs/scratch/saram_lab/ALD/WGS/ALD011_BWAmem_dupremoved_realigned.sorted.bam"
+target = "
+
+ALD10_cov = prepareCoverageGC(target_bed=target, bam=ALD10, "hg19")
+ALD11_cov = prepareCoverageGC(target_bed=target, bam=ALD11, "hg19")
+
+normalizeCoverage(ALD10_cov, ALD11_cov,
+                  writeToFile =TRUE, destination = ".", plot=FALSE)  # add output directory
+
