@@ -1,2 +1,2 @@
 # LOY_Project_ROSMAP
-Depository for loss of Y (LOY) Project 
+Repository for loss of Y (LOY) Project 
