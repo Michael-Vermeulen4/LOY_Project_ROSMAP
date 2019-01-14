@@ -8,7 +8,7 @@ output="/zfs/scratch/saram_lab/ROSMAP_CEL/ROSMAP_Cel/gw6/apt/DEC6_apt/output"
 
 
 args[1] -> i
-message(i)g 
+message(i)
 # cat birdseed.call.txt | grep -Pv '^#' > t; mv t birdseed.call.txt 
 # read in birdseed.calls 
 message("loading birdseed calls")
